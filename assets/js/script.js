@@ -25,13 +25,41 @@ const clickn9 = function(){
     visor = visor + '9'
     labelVisor.innerHTML= visor
 }
+const clickn4 = function(){
+    visor = visor + '4'
+    labelVisor.innerHTML= visor
+}
+const clickn5 = function(){
+    visor = visor + '5'
+    labelVisor.innerHTML= visor
+}
+const clickn6 = function(){
+    visor = visor + '6'
+    labelVisor.innerHTML= visor
+}
+const clickn1 = function(){
+    visor = visor + '1'
+    labelVisor.innerHTML= visor
+}
+const clickn2 = function(){
+    visor = visor + '2'
+    labelVisor.innerHTML= visor
+}
+const clickn3 = function(){
+    visor = visor + '3'
+    labelVisor.innerHTML= visor
+}
+const clickn0 = function(){
+    visor = visor + '0'
+    labelVisor.innerHTML= visor
+}
+
 
 const clickOpDiv = function(){
     operacao = 'divisao'
     let numero = parseFloat(visor)
     valor1 = numero
 }
-
 const igual = function () {
 
     switch(operacao){
