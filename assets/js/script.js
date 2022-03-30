@@ -1,70 +1,186 @@
-let visor = ''
+let visor = 'desligada'
 let valor1 = 0
-let valor2 = 0
+let valor2 = 0; //definir
+let soma = 1;
 let resultado = 0
 let labelVisor = document.querySelector('#visor')
-let operacao = ''
-
+let operacao = '';
+//------------------------------------------------------//
 const reset = function(){
     visor = ''
-    labelVisor.innerHTML= visor
+    const tecla = '';
+    if (visor == 'desligada'){ //teclas
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= '0'
+    }
 }
-
-const clickn7 = function(){
-    visor = visor + '7'
-    labelVisor.innerHTML= visor
+const on = function(){
+    visor = ''
+    labelVisor.innerHTML= '0'
 }
-
-const clickn8 = function(){
-    visor = visor + '8'
-    labelVisor.innerHTML= visor
-
-}
-
-const clickn9 = function(){
-    visor = visor + '9'
-    labelVisor.innerHTML= visor
-}
-const clickn4 = function(){
-    visor = visor + '4'
-    labelVisor.innerHTML= visor
-}
-const clickn5 = function(){
-    visor = visor + '5'
-    labelVisor.innerHTML= visor
-}
-const clickn6 = function(){
-    visor = visor + '6'
-    labelVisor.innerHTML= visor
-}
-const clickn1 = function(){
-    visor = visor + '1'
-    labelVisor.innerHTML= visor
-}
-const clickn2 = function(){
-    visor = visor + '2'
-    labelVisor.innerHTML= visor
-}
-const clickn3 = function(){
-    visor = visor + '3'
-    labelVisor.innerHTML= visor
+const ponto = function(){
+    const tecla = '.';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
 }
 const clickn0 = function(){
-    visor = visor + '0'
-    labelVisor.innerHTML= visor
+    const tecla = '0';
+    if (visor == 'desligada'){
+       alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
 }
-
-
+const clickn2 = function(){
+    const tecla = '2';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickn3 = function(){
+    const tecla = '3';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const off = function(){
+    visor = 'desligada'
+    labelVisor.innerHTML= ''
+    return visor;
+}
+const clickn4 = function(){
+    const tecla = '4';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickn5 = function(){
+    const tecla = '5';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickn6 = function(){
+    const tecla = '6';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickn7 = function(){
+    const tecla = '7';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickn8 = function(){
+    const tecla = '8';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
 const clickOpDiv = function(){
     operacao = 'divisao'
     let numero = parseFloat(visor)
     valor1 = numero
+    visor = ''
 }
-const igual = function () {
-
+const clickn1 = function(){
+    const tecla = '1';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickn9 = function(){
+    const tecla = '9';
+    if (visor == 'desligada'){
+        alerta();
+    }else{
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+}
+const clickOpSub = function(){
+    operacao = 'subtracao'
+    let numero = parseFloat(visor)
+    valor1 = numero
+    visor = ''
+}
+const clickOpSom = function(){
+    operacao = 'soma';
+    let numero = parseFloat(visor)
+    valor1 = numero
+    visor = ''
+}
+const clickOpMult = function(){
+    operacao = 'multiplicacao'
+    let numero = parseFloat(visor)
+    valor1 = numero
+    visor = ''
+}
+//------------------------------------------------//
+const igual = function (){
     switch(operacao){
+        case 'soma':
+            const sTotal = parseFloat(valor1) + parseFloat(visor);
+            console.log(sTotal);
+            labelVisor.innerHTML= `${sTotal}`;
+            visor = sTotal;
+            break;
         case 'divisao':
-
-        break
+            const dTotal = parseFloat(valor1) / parseFloat(visor);
+            console.log(dTotal);
+            labelVisor.innerHTML= `${dTotal}`;
+            visor = dTotal;
+            break;
+        case 'multiplicacao':
+            const mTotal = parseFloat(valor1) * parseFloat(visor); //caso_escolha
+            console.log(mTotal);
+            labelVisor.innerHTML= `${mTotal}`;
+            visor = mTotal;
+            break;
+        case 'subtracao':
+            const subTotal = parseFloat(valor1) - parseFloat(visor);
+            console.log(subTotal);
+            labelVisor.innerHTML= `${subTotal}`;
+            visor = subTotal;
+        break;
+        case 'porcentagem':
+            const porCent = parseFloat(valor1) - parseFloat(visor);
+            console.log(subTotal);
+            labelVisor.innerHTML= `${subTotal}`;
+            visor = subTotal;
+        break;
+        default:
     }
 }
