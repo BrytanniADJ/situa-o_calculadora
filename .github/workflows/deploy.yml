@@ -1,6 +1,4 @@
 on: push
-    branches:
-      - main
 
 name: 🚀 Deploy website on push
 jobs:
@@ -17,4 +15,4 @@ jobs:
         server: ${{ secrets.ftp_server }}
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
-        server-dir: ./htdocs/calc2
+        server-dir: htdocs/calc2
